@@ -32,6 +32,7 @@ I moved to the vsphere-iso builder for 2 main reasons:
 * [Ubuntu 18.04 LTS](https://github.com/cloudmaniac/packer-templates/tree/main/builds/ubuntu/18.04)
 * [Ubuntu 20.04 LTS](https://github.com/cloudmaniac/packer-templates/tree/main/builds/ubuntu/20.04)
 * [Ubuntu 22.04 LTS](https://github.com/cloudmaniac/packer-templates/tree/main/builds/ubuntu/22.04)
+* [Ubuntu 24.04 LTS](https://github.com/cloudmaniac/packer-templates/tree/main/builds/ubuntu/24.04)
 
 ## Usage
 
@@ -41,9 +42,9 @@ Step 2 - Make a copy (or change) and adapt the [cloud definition file](https://g
 
 Step 3 - Update the `buils/common.pkrvars.hcl` file with your desired user credentials (or SSH key).
 
-Step 4 - Navigate to the folder that matches the operating system (and version) that you want to build. E.g.: `builds/ubuntu/22.04`.
+Step 4 - Navigate to the folder that matches the operating system (and version) that you want to build. E.g.: `builds/ubuntu/24.04`.
 
-Step 4 - From that folder, edit the respective HCL file with your values, e.g. `ubuntu-22.04.auto.pkrvars.hcl` file or `photon-4.0.auto.pkrvars.hcl`. For Ubuntu 20.04 and 22.04, adapt the `user-data` cloud-init file with the desired configuration ([documentation](https://ubuntu.com/server/docs/install/autoinstall-reference) for reference).
+Step 4 - From that folder, edit the respective HCL file with your values, e.g. `ubuntu-24.04.auto.pkrvars.hcl` file or `photon-4.0.auto.pkrvars.hcl`. For Ubuntu 20.04, 22.04 and 24.04, adapt the `user-data` cloud-init file with the desired configuration ([documentation](https://ubuntu.com/server/docs/install/autoinstall-reference) for reference).
 
 Step 5 - Run `packer init .` to install the required plugin(s).
 
