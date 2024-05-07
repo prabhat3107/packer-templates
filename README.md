@@ -2,7 +2,9 @@
 
 ## News
 
-(2023/01/16) Switched all templates to HCL...finally! 😅
+(2024/05/07) Added Ubuntu 24.04 LTS template.; validated usage with Packer 1.10.3.
+
+(2023/11/27) Switched all templates to HCL...finally! 😅
 
 (2023/01/16) Added Ubuntu 22.04 LTS template; validated usage with Packer 1.8.5.
 

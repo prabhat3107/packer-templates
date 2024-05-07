@@ -1,10 +1,10 @@
 #cloud-config
 autoinstall:
   version: 1
+  early-commands:
+  # Stop ssh for packer as it thinks it timed out (workaround)
+  - sudo systemctl stop ssh
   locale: en_US
-  keyboard:
-    layout: en
-    variant: us
   network:
     network:
       version: 2
@@ -27,3 +27,5 @@ autoinstall:
     - echo '${guest_username} ALL=(ALL) NOPASSWD:ALL' > /target/etc/sudoers.d/${guest_username}
     - sudo lvm lvextend -l +100%FREE /dev/ubuntu-vg/ubuntu-lv
     - sudo resize2fs -p /dev/mapper/ubuntu--vg-ubuntu--lv
+  early-commands:
+    - sudo systemctl stop ssh
