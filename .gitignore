@@ -4,6 +4,8 @@ packer_cache/*
 # Exception to the rule to keep the "empty" folder in the repository
 !packer_cache/.gitkeep 
 
+# Ignore .idea
+.idea/*
 
 # Crash log
 crash.log
